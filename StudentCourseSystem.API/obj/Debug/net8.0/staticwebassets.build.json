@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "VMZCJP6FkZwVoraylBtpz54RSAIJLgdWEVm5uAh8BJg=",
+  "Source": "StudentCourseSystem.API",
+  "BasePath": "_content/StudentCourseSystem.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
