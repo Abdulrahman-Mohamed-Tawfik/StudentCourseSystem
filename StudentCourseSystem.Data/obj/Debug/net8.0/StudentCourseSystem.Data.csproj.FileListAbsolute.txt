@@ -1,0 +1,16 @@
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.csproj.AssemblyReference.cache
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.AssemblyInfoInputs.cache
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.AssemblyInfo.cs
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.csproj.CoreCompileInputs.cache
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.sourcelink.json
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\bin\Debug\net8.0\StudentCourseSystem.Data.deps.json
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\bin\Debug\net8.0\StudentCourseSystem.Data.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\bin\Debug\net8.0\StudentCourseSystem.Data.pdb
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\bin\Debug\net8.0\StudentCourseSystem.Core.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\bin\Debug\net8.0\StudentCourseSystem.Core.pdb
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentC.1330506B.Up2Date
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\refint\StudentCourseSystem.Data.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\StudentCourseSystem.Data.pdb
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Data\obj\Debug\net8.0\ref\StudentCourseSystem.Data.dll

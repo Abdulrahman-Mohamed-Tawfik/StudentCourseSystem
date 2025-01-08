@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "j9PKObMbl/0=",
+  "dgSpecHash": "T3kJLCym8tY=",
   "success": true,
-  "projectFilePath": "F:\\vs projects\\repos\\StudentCourseSystem.API\\StudentCourseSystem.API.csproj",
+  "projectFilePath": "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.API\\StudentCourseSystem.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Abdulrahman\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Abdulrahman\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\Abdulrahman\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Abdulrahman\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Abdulrahman\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

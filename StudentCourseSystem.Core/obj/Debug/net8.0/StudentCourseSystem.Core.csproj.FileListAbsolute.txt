@@ -1,0 +1,12 @@
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\bin\Debug\net8.0\StudentCourseSystem.Core.deps.json
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\bin\Debug\net8.0\StudentCourseSystem.Core.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\bin\Debug\net8.0\StudentCourseSystem.Core.pdb
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.AssemblyInfoInputs.cache
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.AssemblyInfo.cs
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.csproj.CoreCompileInputs.cache
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.sourcelink.json
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\refint\StudentCourseSystem.Core.dll
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\StudentCourseSystem.Core.pdb
+F:\GitHub\StudentCourseSystem\StudentCourseSystem.Core\obj\Debug\net8.0\ref\StudentCourseSystem.Core.dll

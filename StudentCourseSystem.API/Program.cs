@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
-using StudentCourseSystem.API.Data;
+using StudentCourseSystem.Core.Interfaces;
+using StudentCourseSystem.Data.Data;
+using StudentCourseSystem.Data.Repositories;
 
 namespace StudentCourseSystem.API
 {
@@ -19,6 +21,14 @@ namespace StudentCourseSystem.API
             // connect to db
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(conn, ServerVersion.AutoDetect(conn)));
+
+            // Inject Student Repo
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            // Inject Course Repo
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+
+            // Register AutoMappers
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             var app = builder.Build();
 
