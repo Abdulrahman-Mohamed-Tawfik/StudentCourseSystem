@@ -1,0 +1,60 @@
+# Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Aa]rchive/
+[Aa]ssemblyInfo.cs
+
+# User-specific files
+.vs/
+.vscode/
+.idea/
+
+# User-specific files for Visual Studio for Mac
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files (Installer package)
+*.exe
+
+# ASP.NET temporary files
+obj/
+bin/
+obj/**/*/
+bin/**/*/
+
+# NPM packages (for front-end projects)
+node_modules/
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# IDE files
+.vs2019/
+.vs2017/
+.vs2015/
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Coverlet code coverage
+coverage/
+
+# ASP.NET Web API-specific
+HttpRequestException.log
+
+# Appsettings config files (Optional - if you don't want them to be tracked)
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
