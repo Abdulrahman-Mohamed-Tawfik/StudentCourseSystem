@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
-using FluentValidation;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using StudentCourseSystem.API.DTOs;
 using StudentCourseSystem.API.Validators;
-using StudentCourseSystem.Core.Interfaces;
-using StudentCourseSystem.Core.Models;
-using StudentCourseSystem.Data.Repositories;
+using StudentCourseSystem.Application.Interfaces;
+using StudentCourseSystem.Domain.Models;
+using StudentCourseSystem.DTOs.Students;
 
 namespace StudentCourseSystem.API.Controllers
 {

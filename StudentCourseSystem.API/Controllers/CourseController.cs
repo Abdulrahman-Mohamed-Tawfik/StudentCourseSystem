@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using StudentCourseSystem.API.DTOs;
 using StudentCourseSystem.API.Validators;
-using StudentCourseSystem.Core.Interfaces;
-using StudentCourseSystem.Core.Models;
+using StudentCourseSystem.Application.Interfaces;
+using StudentCourseSystem.Domain.Models;
+using StudentCourseSystem.DTOs.Courses;
 
 namespace StudentCourseSystem.API.Controllers
 {

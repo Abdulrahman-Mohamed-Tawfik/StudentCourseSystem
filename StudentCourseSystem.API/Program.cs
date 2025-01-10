@@ -1,8 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
-using StudentCourseSystem.Core.Interfaces;
-using StudentCourseSystem.Data.Data;
-using StudentCourseSystem.Data.Repositories;
+using StudentCourseSystem.Application.Interfaces;
+using StudentCourseSystem.Application.Repositories;
+using StudentCourseSystem.Infrastructure.Data;
 
 namespace StudentCourseSystem.API
 {

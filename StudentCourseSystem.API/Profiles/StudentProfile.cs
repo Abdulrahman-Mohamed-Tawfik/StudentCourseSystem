@@ -1,7 +1,7 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using StudentCourseSystem.API.DTOs;
-using StudentCourseSystem.Core.Models;
 using AutoMapper;
+using StudentCourseSystem.Domain.Models;
+using StudentCourseSystem.DTOs.Students;
 
 namespace StudentCourseSystem.API.Profiles
 {

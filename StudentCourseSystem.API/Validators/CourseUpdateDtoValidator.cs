@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using StudentCourseSystem.API.DTOs;
+using StudentCourseSystem.DTOs.Courses;
 
 namespace StudentCourseSystem.API.Validators
 {

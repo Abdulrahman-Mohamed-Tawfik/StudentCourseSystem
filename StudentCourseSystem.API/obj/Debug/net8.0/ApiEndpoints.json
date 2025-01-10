@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "courseDto",
-        "Type": "StudentCourseSystem.API.DTOs.CourseCreateDto",
+        "Type": "StudentCourseSystem.DTOs.Courses.CourseCreateDto",
         "IsRequired": true
       }
     ],
@@ -56,7 +56,7 @@
       },
       {
         "Name": "courseDto",
-        "Type": "StudentCourseSystem.API.DTOs.CourseUpdateDto",
+        "Type": "StudentCourseSystem.DTOs.Courses.CourseUpdateDto",
         "IsRequired": true
       }
     ],
@@ -98,7 +98,7 @@
     "Parameters": [
       {
         "Name": "studentDto",
-        "Type": "StudentCourseSystem.API.DTOs.StudentCreateDto",
+        "Type": "StudentCourseSystem.DTOs.Students.StudentCreateDto",
         "IsRequired": true
       }
     ],
@@ -135,7 +135,7 @@
       },
       {
         "Name": "studentDto",
-        "Type": "StudentCourseSystem.API.DTOs.StudentUpdateDto",
+        "Type": "StudentCourseSystem.DTOs.Students.StudentUpdateDto",
         "IsRequired": true
       }
     ],
