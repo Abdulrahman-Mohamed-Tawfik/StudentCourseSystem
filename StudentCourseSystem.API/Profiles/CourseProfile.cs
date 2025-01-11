@@ -8,8 +8,8 @@ namespace StudentCourseSystem.API.Profiles
     {
         public CourseProfile()
         {
-            CreateMap<CourseCreateDto, Course>();
-            CreateMap<CourseUpdateDto, Course>();
+            CreateMap<CourseCreateDto, CourseEntity>();
+            CreateMap<CourseUpdateDto, CourseEntity>();
         }
     }
 }

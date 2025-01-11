@@ -1,6 +1,6 @@
 ﻿namespace StudentCourseSystem.Domain.Models
 {
-    public class StudentCourse
+    public class StudentCourseEntity
     {
         public int Id { get; set; }
         public int StudentId { get; set; }
@@ -8,7 +8,7 @@
         public float StudentGrade { get; set; }
 
 
-        public Student Student { get; set; }
-        public Course Course { get; set; }
+        public StudentEntity Student { get; set; }
+        public CourseEntity Course { get; set; }
     }
 }

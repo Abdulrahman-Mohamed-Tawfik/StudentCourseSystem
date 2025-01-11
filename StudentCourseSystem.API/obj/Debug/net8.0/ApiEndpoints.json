@@ -11,7 +11,7 @@
   },
   {
     "ContainingType": "StudentCourseSystem.API.Controllers.CourseController",
-    "Method": "AddCourse",
+    "Method": "CreateCourse",
     "RelativePath": "api/Course",
     "HttpMethod": "POST",
     "IsController": true,
@@ -43,7 +43,7 @@
   },
   {
     "ContainingType": "StudentCourseSystem.API.Controllers.CourseController",
-    "Method": "UpdateCourseById",
+    "Method": "UpdateCourse",
     "RelativePath": "api/Course/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -64,7 +64,7 @@
   },
   {
     "ContainingType": "StudentCourseSystem.API.Controllers.CourseController",
-    "Method": "DeleteCourseById",
+    "Method": "DeleteCourse",
     "RelativePath": "api/Course/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -151,6 +151,48 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCourseSystem.API.Controllers.StudentCourseController",
+    "Method": "AddStudentCourse",
+    "RelativePath": "api/StudentCourse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentCourseCreateDto",
+        "Type": "StudentCourseSystem.DTOs.StudentCourse.StudentCourseCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCourseSystem.API.Controllers.StudentCourseController",
+    "Method": "GetTopGradesForAllCourses",
+    "RelativePath": "api/StudentCourse/top-grades",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCourseSystem.API.Controllers.StudentCourseController",
+    "Method": "GetTopGradesForCourse",
+    "RelativePath": "api/StudentCourse/top-grades/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -1,0 +1,6 @@
+StudentCourseSystem\StudentCourseSystem.Application\Interfaces\ICourseRepository.cs
+StudentCourseSystem\StudentCourseSystem.Application\Interfaces\IStudentRepository.cs
+StudentCourseSystem\StudentCourseSystem.Application\Repositories\CourseRepository.cs
+StudentCourseSystem\StudentCourseSystem.Application\Repositories\StudentRepository.cs
+StudentCourseSystem\StudentCourseSystem.Application\Interfaces\ICommonRepository.cs
+StudentCourseSystem\StudentCourseSystem.Application\Repositories\CommonRepository.cs

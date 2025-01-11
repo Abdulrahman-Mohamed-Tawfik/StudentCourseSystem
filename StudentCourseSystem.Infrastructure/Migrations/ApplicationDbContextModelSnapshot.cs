@@ -22,7 +22,7 @@ namespace StudentCourseSystem.Infrastructure.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("StudentCourseSystem.Domain.Models.Course", b =>
+            modelBuilder.Entity("StudentCourseSystem.Domain.Models.CourseEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,33 @@ namespace StudentCourseSystem.Infrastructure.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("StudentCourseSystem.Domain.Models.Student", b =>
+            modelBuilder.Entity("StudentCourseSystem.Domain.Models.StudentCourseEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("StudentGrade")
+                        .HasColumnType("float");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentCourses");
+                });
+
+            modelBuilder.Entity("StudentCourseSystem.Domain.Models.StudentEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -91,41 +117,15 @@ namespace StudentCourseSystem.Infrastructure.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("StudentCourseSystem.Domain.Models.StudentCourse", b =>
+            modelBuilder.Entity("StudentCourseSystem.Domain.Models.StudentCourseEntity", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<float>("StudentGrade")
-                        .HasColumnType("float");
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("StudentCourse");
-                });
-
-            modelBuilder.Entity("StudentCourseSystem.Domain.Models.StudentCourse", b =>
-                {
-                    b.HasOne("StudentCourseSystem.Domain.Models.Course", "Course")
+                    b.HasOne("StudentCourseSystem.Domain.Models.CourseEntity", "Course")
                         .WithMany("StudentCourses")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("StudentCourseSystem.Domain.Models.Student", "Student")
+                    b.HasOne("StudentCourseSystem.Domain.Models.StudentEntity", "Student")
                         .WithMany("StudentCourses")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -136,12 +136,12 @@ namespace StudentCourseSystem.Infrastructure.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("StudentCourseSystem.Domain.Models.Course", b =>
+            modelBuilder.Entity("StudentCourseSystem.Domain.Models.CourseEntity", b =>
                 {
                     b.Navigation("StudentCourses");
                 });
 
-            modelBuilder.Entity("StudentCourseSystem.Domain.Models.Student", b =>
+            modelBuilder.Entity("StudentCourseSystem.Domain.Models.StudentEntity", b =>
                 {
                     b.Navigation("StudentCourses");
                 });

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using StudentCourseSystem.API.Validators;
 using StudentCourseSystem.Application.Interfaces;
+using StudentCourseSystem.Application.Interfaces.Features.Student.Commands;
+using StudentCourseSystem.Application.Interfaces.Features.Student.Queries;
 using StudentCourseSystem.Domain.Models;
 using StudentCourseSystem.DTOs.Students;
 
@@ -11,12 +13,27 @@ namespace StudentCourseSystem.API.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        IStudentRepository _studentRepository;
+        //IStudentRepository _studentRepository;
         private readonly IMapper _mapper;
+        private readonly IGetAllStudentsQuery _getAllStudentsQuery;
+        private readonly IGetStudentByIdQuery _getStudentByIdQuery;
+        private readonly ICreateStudentCommand _createStudentCommand;
+        private readonly IUpdateStudentCommand _updateStudentCommand;
+        private readonly IDeleteStudentCommand _deleteStudentCommand;
 
-        public StudentController(IStudentRepository studentRepository, IMapper mapper)
+        public StudentController(
+            IGetAllStudentsQuery getAllStudentsQuery,
+            IGetStudentByIdQuery getStudentByIdQuery,
+            ICreateStudentCommand createStudentCommand,
+            IUpdateStudentCommand updateStudentCommand,
+            IDeleteStudentCommand deleteStudentCommand,
+            IMapper mapper)
         {
-            _studentRepository = studentRepository;
+            _getAllStudentsQuery = getAllStudentsQuery;
+            _getStudentByIdQuery = getStudentByIdQuery;
+            _createStudentCommand = createStudentCommand;
+            _updateStudentCommand = updateStudentCommand;
+            _deleteStudentCommand = deleteStudentCommand;
             _mapper = mapper;
         }
 
@@ -25,7 +42,8 @@ namespace StudentCourseSystem.API.Controllers
         {
             try
             {
-                return Ok(await _studentRepository.GetAllAsync());
+                var students = await _getAllStudentsQuery.ExecuteAsync();
+                return Ok(students);
             }
             catch (Exception ex)
             {
@@ -38,7 +56,7 @@ namespace StudentCourseSystem.API.Controllers
         {
             try
             {
-                var student = await _studentRepository.GetAsync(s => s.Id == id);
+                var student = await _getStudentByIdQuery.ExecuteAsync(id);
                 if (student == null)
                 {
                     return NotFound();
@@ -64,10 +82,10 @@ namespace StudentCourseSystem.API.Controllers
                     return BadRequest(validationResult.Errors);
                 }
 
-                var student = _mapper.Map<Student>(studentDto);
+                var student = _mapper.Map<StudentEntity>(studentDto);
                 student.IsDeleted = false; // Default value for new students
 
-                await _studentRepository.CreateAsync(student);
+                await _createStudentCommand.ExecuteAsync(student);
 
                 return Ok("Student created successfully");
             }
@@ -90,21 +108,7 @@ namespace StudentCourseSystem.API.Controllers
                     return BadRequest(validationResult.Errors);
                 }
 
-                var student = (await _studentRepository.GetAsync(s => s.Id == id)).FirstOrDefault();
-                if (student == null)
-                    return NotFound($"Student with ID {id} not found.");
-
-                // Update only the provided fields
-                if (studentDto.Name != null)
-                    student.Name = studentDto.Name;
-                if (studentDto.Email != null)
-                    student.Email = studentDto.Email;
-                if (studentDto.Password != null)
-                    student.Password = studentDto.Password;
-                if (studentDto.Gender != null)
-                    student.Gender = studentDto.Gender;
-
-                await _studentRepository.SaveChangesAsync();
+                await _updateStudentCommand.ExecuteAsync(id, studentDto);
 
                 return Ok("Student updated successfully");
             }
@@ -119,12 +123,12 @@ namespace StudentCourseSystem.API.Controllers
         {
             try
             {
-                var success = await _studentRepository.DeletePhysicallyAsync(id);
+                var success = await _deleteStudentCommand.ExecuteAsync(id);
                 if (!success)
                 {
                     return NotFound($"Student with ID {id} not found.");
                 }
-                return Ok("Student is Deleted");
+                return Ok("Student deleted successfully");
             }
             catch (Exception ex)
             {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentCourseSystem.Application.Features.Courses.Commands
+namespace StudentCourseSystem.Application.Repositories.Features.Course.Queries
 {
-    public class CreateCourseCommand
+    internal class FilterCourseQuery
     {
     }
 }

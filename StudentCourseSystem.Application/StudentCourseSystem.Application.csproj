@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Enums\" />
-    <Folder Include="Features\Courses\Queries\" />
-    <Folder Include="Features\Students\Commands\" />
-    <Folder Include="Features\Students\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StudentCourseSystem.Domain\StudentCourseSystem.Domain.csproj" />
+    <ProjectReference Include="..\StudentCourseSystem.DTOs\StudentCourseSystem.DTOs.csproj" />
     <ProjectReference Include="..\StudentCourseSystem.Infrastructure\StudentCourseSystem.Infrastructure.csproj" />
   </ItemGroup>
 

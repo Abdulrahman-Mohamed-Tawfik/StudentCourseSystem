@@ -2,7 +2,7 @@
 
 namespace StudentCourseSystem.Domain.Models
 {
-    public class Student
+    public class StudentEntity
     {
         public int Id { get; set; }
         [Required, MaxLength(255)]
@@ -17,6 +17,6 @@ namespace StudentCourseSystem.Domain.Models
         public DateOnly DateOfBirth { get; set; }
         public bool IsDeleted { get; set; }
 
-        public ICollection<StudentCourse>? StudentCourses { get; set; }
+        public ICollection<StudentCourseEntity>? StudentCourses { get; set; }
     }
 }

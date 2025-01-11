@@ -2,7 +2,7 @@
 
 namespace StudentCourseSystem.Domain.Models
 {
-    public class Course
+    public class CourseEntity
     {
         public int Id { get; set; }
         [Required, MaxLength(255)]
@@ -13,7 +13,7 @@ namespace StudentCourseSystem.Domain.Models
         public int CreditHours { get; set; }
         public bool IsDeleted { get; set; }
 
-        public ICollection<StudentCourse> StudentCourses { get; set; }
+        public ICollection<StudentCourseEntity> StudentCourses { get; set; }
 
     }
 }

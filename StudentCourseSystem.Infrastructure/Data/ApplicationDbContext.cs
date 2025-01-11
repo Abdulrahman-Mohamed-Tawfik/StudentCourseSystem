@@ -10,22 +10,23 @@ namespace StudentCourseSystem.Infrastructure.Data
         {
         }
 
-        DbSet<Student> Students { get; set; }
-        DbSet<Course> Courses { get; set; }
+        public DbSet<StudentEntity> Students { get; set; }
+        public DbSet<CourseEntity> Courses { get; set; }
+        public DbSet<StudentCourseEntity> StudentCourses { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<StudentCourse>()
+            modelBuilder.Entity<StudentCourseEntity>()
                 .HasKey(sc => sc.Id);
 
-            modelBuilder.Entity<StudentCourse>()
+            modelBuilder.Entity<StudentCourseEntity>()
                 .HasOne(sc => sc.Student)
                 .WithMany(s => s.StudentCourses)
                 .HasForeignKey(sc => sc.StudentId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<StudentCourse>()
+            modelBuilder.Entity<StudentCourseEntity>()
                 .HasOne(sc => sc.Course)
                 .WithMany(c => c.StudentCourses)
                 .HasForeignKey(sc => sc.CourseId)

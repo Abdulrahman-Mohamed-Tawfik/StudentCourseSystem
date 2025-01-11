@@ -72,6 +72,12 @@
               "target": "Package",
               "version": "[8.0.11, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -130,6 +136,9 @@
             "projectReferences": {
               "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.Domain\\StudentCourseSystem.Domain.csproj": {
                 "projectPath": "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.Domain\\StudentCourseSystem.Domain.csproj"
+              },
+              "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.DTOs\\StudentCourseSystem.DTOs.csproj": {
+                "projectPath": "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.DTOs\\StudentCourseSystem.DTOs.csproj"
               },
               "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.Infrastructure\\StudentCourseSystem.Infrastructure.csproj": {
                 "projectPath": "F:\\GitHub\\StudentCourseSystem\\StudentCourseSystem.Infrastructure\\StudentCourseSystem.Infrastructure.csproj"

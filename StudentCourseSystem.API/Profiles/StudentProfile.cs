@@ -9,8 +9,8 @@ namespace StudentCourseSystem.API.Profiles
     {
         public StudentProfile()
         {
-            CreateMap<StudentCreateDto, Student>();
-            CreateMap<StudentUpdateDto, Student>();
+            CreateMap<StudentCreateDto, StudentEntity>();
+            CreateMap<StudentUpdateDto, StudentEntity>();
         }
     }
 }
