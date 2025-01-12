@@ -14,17 +14,21 @@ namespace StudentCourseSystem.API.Controllers
     public class StudentCourseController : ControllerBase
     {
         private readonly IGetTopGradesForAllCourses _getTopGradesForAllCourses;
+        private readonly IGetTopTotalGrades _getTopTotalGrades;
         private readonly IGetTopGradesForCourseQuery _getTopGradesForCourseQuery;
         private readonly IMapper _mapper;
         private readonly ICreateStudentCourseCommand _createStudentCourseCommand;
 
 
-        public StudentCourseController(IGetTopGradesForAllCourses getTopGradesForAllCourses,
+        public StudentCourseController(
+            IGetTopGradesForAllCourses getTopGradesForAllCourses,
+            IGetTopTotalGrades getTopTotalGrades,
             IGetTopGradesForCourseQuery getTopGradesForCourseQuery,
             IMapper mapper,
             ICreateStudentCourseCommand createStudentCourseCommand)
         {
             _getTopGradesForAllCourses = getTopGradesForAllCourses;
+            _getTopTotalGrades = getTopTotalGrades;
             _getTopGradesForCourseQuery = getTopGradesForCourseQuery;
             _mapper = mapper;
             _createStudentCourseCommand = createStudentCourseCommand;
@@ -36,6 +40,24 @@ namespace StudentCourseSystem.API.Controllers
             try
             {
                 var result = await _getTopGradesForAllCourses.ExecuteAsync();
+                if (!result.Any())
+                {
+                    return NotFound($"No students found");
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet("top-total-grades")]
+        public async Task<IActionResult> GetTopTotalGradesForAllCourses()
+        {
+            try
+            {
+                var result = await _getTopTotalGrades.ExecuteAsync();
                 if (!result.Any())
                 {
                     return NotFound($"No students found");

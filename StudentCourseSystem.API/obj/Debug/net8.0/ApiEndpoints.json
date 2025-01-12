@@ -198,5 +198,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCourseSystem.API.Controllers.StudentCourseController",
+    "Method": "GetTopTotalGradesForAllCourses",
+    "RelativePath": "api/StudentCourse/top-total-grades",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

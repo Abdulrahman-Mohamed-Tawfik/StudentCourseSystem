@@ -71,6 +71,7 @@ namespace StudentCourseSystem.API
             //StudentCourse
             builder.Services.AddScoped<IGetTopGradesForAllCourses, GetTopGradesForAllCourses>();
             builder.Services.AddScoped<IGetTopGradesForCourseQuery, GetTopGradesForCourseQuery>();
+            builder.Services.AddScoped<IGetTopTotalGrades, GetTopTotalGrades>();
 
 
 

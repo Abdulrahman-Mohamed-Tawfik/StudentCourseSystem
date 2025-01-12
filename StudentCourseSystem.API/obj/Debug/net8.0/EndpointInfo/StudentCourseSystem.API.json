@@ -267,6 +267,18 @@
         }
       }
     },
+    "/api/StudentCourse/top-total-grades": {
+      "get": {
+        "tags": [
+          "StudentCourse"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/StudentCourse/top-grades/{courseId}": {
       "get": {
         "tags": [
